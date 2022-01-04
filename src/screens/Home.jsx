@@ -1,5 +1,6 @@
 import { Box } from "@mui/system";
 import React, { useState, useEffect } from "react";
+import LinearBuffer from "../components/LinearBuffer";
 import WeatherReviewCard from "../components/WeatherReviewCard";
 
 const Home = () => {
@@ -61,7 +62,11 @@ const Home = () => {
   if (error) {
     return <div>Error: {error.message}</div>;
   } else if (!isLoaded) {
-    return <div>Loading...</div>;
+    return (
+      <div>
+        <LinearBuffer />
+      </div>
+    );
   } else {
     return (
       <Box sx={{ px: 5, mt: 4 }}>
