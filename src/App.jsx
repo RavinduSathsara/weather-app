@@ -1,9 +1,13 @@
 import React from "react";
-
+import MainAppBar from "./components/MainAppBar";
+import CssBaseline from "@mui/material/CssBaseline";
+import Home from "./screens/Home";
 const App = () => {
   return (
-    <div>
-      <h1>Hello World</h1>
+    <div className="App">
+      <CssBaseline />
+      <MainAppBar />
+      <Home />
     </div>
   );
 };
