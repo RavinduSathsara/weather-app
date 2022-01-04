@@ -71,6 +71,7 @@ const Home = () => {
           time={items.location.localtime}
           weather_descriptions={items.current.weather_descriptions}
           temperature={items.current.temperature}
+          location={items.location.name}
         />
       </Box>
     );

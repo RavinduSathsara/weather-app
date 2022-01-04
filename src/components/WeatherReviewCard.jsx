@@ -49,7 +49,7 @@ export default function WeatherReviewCard(props) {
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            <img src={props.icon} alt="" srcset="" />
+            <img src={props.icon} alt="" srcSet="" />
           </Avatar>
         }
         action={
@@ -67,14 +67,22 @@ export default function WeatherReviewCard(props) {
         alt="Paella dish"
       />
       <CardContent>
-        <Typography variant="h5" color="Highlight">
+        <Typography variant="h6" color="Highlight">
           Weather Satatus : {props.weather_descriptions}
         </Typography>
-        <Typography variant="h6">
+        <Typography sx={{ mt: 1 }} variant="h7">
           Temperature
           <StyledBadge badgeContent={props.temperature} color="secondary">
             <ThermostatIcon />
           </StyledBadge>{" "}
+        </Typography>
+        <Typography
+          sx={{ mt: 3 }}
+          variant="subtitle2"
+          gutterBottom
+          component="div"
+        >
+          Location : {props.location}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -93,7 +101,7 @@ export default function WeatherReviewCard(props) {
           <ExpandMoreIcon />
         </ExpandMore>
       </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
+      {/* <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography paragraph>Method:</Typography>
           <Typography paragraph>
@@ -123,7 +131,7 @@ export default function WeatherReviewCard(props) {
             serve.
           </Typography>
         </CardContent>
-      </Collapse>
+      </Collapse> */}
     </Card>
   );
 }
